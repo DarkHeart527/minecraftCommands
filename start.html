@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<textarea id="input"></textarea>
+		<textarea id="command"></textarea>
+	</body>
+	<script>
+		function getCommand() {
+		 var initial = '/give @p skull 1 3 {SkullOwner: "';
+		 var head = document.getElementById('input').value;
+		 initial += head + '"}';
+		 document.getElementById('command').innerHTML = initial;
+		}
+		setInterval( function() { getCommand(); }, 100);
+	</script>
+</html>
